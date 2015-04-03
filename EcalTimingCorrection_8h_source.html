@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">EcalTimingCorrection.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="EcalTimingCorrection_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef EcalTimingCorrection_H</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef EcalTimingCorrection_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define EcalTimingCorrection_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="comment">/**\class EcalTimingCorrection</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
@@ -137,15 +136,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classEcalTimingCorrection.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEcalTimingCorrection.html">EcalTimingCorrection</a> : <span class="keyword">public</span> edm::EDAnalyzer {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="classEcalTimingCorrection.html#af8c9c761bddb8a2afa38d841b61dcc00">EcalTimingCorrection</a>( <span class="keyword">const</span> edm::ParameterSet&amp; );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="classEcalTimingCorrection.html#a5b17b81205a1b34c64958324661e44fe">~EcalTimingCorrection</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="classEcalTimingCorrection.html">EcalTimingCorrection</a>( <span class="keyword">const</span> edm::ParameterSet&amp; );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      ~<a class="code" href="classEcalTimingCorrection.html">EcalTimingCorrection</a>();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEcalTimingCorrection.html#affe6d15635ca8c09a7ce851f4fcde6c7">analyze</a>(  edm::Event <span class="keyword">const</span>&amp;,   edm::EventSetup <span class="keyword">const</span>&amp; );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEcalTimingCorrection.html#a3ad6c3d51e032650eb6bf5e7ce5614dd">beginJob</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEcalTimingCorrection.html#a37a9e26101d5602246a563647674396c">beginRun</a>(edm::EventSetup <span class="keyword">const</span>&amp;);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEcalTimingCorrection.html#aec31e55ce55592638c02b647e8d57c68">endJob</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="classEcalTimingCorrection.html#a508478d4ad05323e6af5c9e4d6b4f9f8">timecorr</a>(<span class="keyword">const</span> CaloSubdetectorGeometry *geometry_p, DetId <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> analyze(  edm::Event <span class="keyword">const</span>&amp;,   edm::EventSetup <span class="keyword">const</span>&amp; );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> beginJob();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> beginRun(edm::EventSetup <span class="keyword">const</span>&amp;);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> endJob();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordtype">double</span> timecorr(<span class="keyword">const</span> CaloSubdetectorGeometry *geometry_p, DetId <span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      std::string rootfile_;</div>
@@ -181,18 +180,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classEcalTimingCorrection_html_aec31e55ce55592638c02b647e8d57c68"><div class="ttname"><a href="classEcalTimingCorrection.html#aec31e55ce55592638c02b647e8d57c68">EcalTimingCorrection::endJob</a></div><div class="ttdeci">virtual void endJob()</div></div>
-<div class="ttc" id="classEcalTimingCorrection_html_a508478d4ad05323e6af5c9e4d6b4f9f8"><div class="ttname"><a href="classEcalTimingCorrection.html#a508478d4ad05323e6af5c9e4d6b4f9f8">EcalTimingCorrection::timecorr</a></div><div class="ttdeci">double timecorr(const CaloSubdetectorGeometry *geometry_p, DetId id)</div></div>
-<div class="ttc" id="classEcalTimingCorrection_html_af8c9c761bddb8a2afa38d841b61dcc00"><div class="ttname"><a href="classEcalTimingCorrection.html#af8c9c761bddb8a2afa38d841b61dcc00">EcalTimingCorrection::EcalTimingCorrection</a></div><div class="ttdeci">EcalTimingCorrection(const edm::ParameterSet &amp;)</div></div>
-<div class="ttc" id="classEcalTimingCorrection_html_a3ad6c3d51e032650eb6bf5e7ce5614dd"><div class="ttname"><a href="classEcalTimingCorrection.html#a3ad6c3d51e032650eb6bf5e7ce5614dd">EcalTimingCorrection::beginJob</a></div><div class="ttdeci">virtual void beginJob()</div></div>
 <div class="ttc" id="classEcalTimingCorrection_html"><div class="ttname"><a href="classEcalTimingCorrection.html">EcalTimingCorrection</a></div><div class="ttdef"><b>Definition:</b> EcalTimingCorrection.h:49</div></div>
-<div class="ttc" id="classEcalTimingCorrection_html_affe6d15635ca8c09a7ce851f4fcde6c7"><div class="ttname"><a href="classEcalTimingCorrection.html#affe6d15635ca8c09a7ce851f4fcde6c7">EcalTimingCorrection::analyze</a></div><div class="ttdeci">virtual void analyze(edm::Event const &amp;, edm::EventSetup const &amp;)</div></div>
-<div class="ttc" id="classEcalTimingCorrection_html_a37a9e26101d5602246a563647674396c"><div class="ttname"><a href="classEcalTimingCorrection.html#a37a9e26101d5602246a563647674396c">EcalTimingCorrection::beginRun</a></div><div class="ttdeci">virtual void beginRun(edm::EventSetup const &amp;)</div></div>
-<div class="ttc" id="classEcalTimingCorrection_html_a5b17b81205a1b34c64958324661e44fe"><div class="ttname"><a href="classEcalTimingCorrection.html#a5b17b81205a1b34c64958324661e44fe">EcalTimingCorrection::~EcalTimingCorrection</a></div><div class="ttdeci">~EcalTimingCorrection()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 3 2015 15:20:08 for EcalTiming by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 3 2015 15:49:50 for EcalTiming by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

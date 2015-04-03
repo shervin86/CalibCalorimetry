@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">EcalCrystalTimingCalibration.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="EcalCrystalTimingCalibration_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EcalTimingEvent_8h.html">CalibCalorimetry/EcalTiming/interface/EcalTimingEvent.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;CalibCalorimetry/EcalTiming/interface/EcalTimingEvent.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
@@ -124,20 +123,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classEcalCrystalTimingCalibration.html#a07b8f3990a2f72fb10e84c26dddad1c0">   38</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classEcalCrystalTimingCalibration.html#a07b8f3990a2f72fb10e84c26dddad1c0">num</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> _num;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classEcalCrystalTimingCalibration.html#a9b429825019ee3d82be32e7869e8807f">   42</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classEcalCrystalTimingCalibration.html#a9b429825019ee3d82be32e7869e8807f">mean</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> mean()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> _sum / _num;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }; <span class="comment">///&lt; average time (mean of the time distribution)</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classEcalCrystalTimingCalibration.html#a6a0685fed9b017364a5806e08cf656d4">   46</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classEcalCrystalTimingCalibration.html#a6a0685fed9b017364a5806e08cf656d4">stdDev</a>() const  <span class="comment">///&lt; standard deviation of the time distribution</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span>    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">float</span> mean_ = <a class="code" href="classEcalCrystalTimingCalibration.html#a9b429825019ee3d82be32e7869e8807f">mean</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">float</span> mean_ = mean();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> sqrt(_sum2 / _num - mean_ * mean_);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classEcalCrystalTimingCalibration.html#a7af26b1c675a3c578079187ded8ada8a">   51</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classEcalCrystalTimingCalibration.html#a7af26b1c675a3c578079187ded8ada8a">meanError</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> meanError()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classEcalCrystalTimingCalibration.html#a6a0685fed9b017364a5806e08cf656d4">stdDev</a>() / sqrt(_num);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
@@ -182,9 +181,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">/*  } */</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">/* } */</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classEcalCrystalTimingCalibration.html#a232a4f3b42645fdba4b056b588bcb677">   96</a></span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="classEcalCrystalTimingCalibration.html#a232a4f3b42645fdba4b056b588bcb677">operator&lt;&lt; </a>(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classEcalCrystalTimingCalibration.html">EcalCrystalTimingCalibration</a>&amp; s)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">friend</span> ostream&amp; operator&lt;&lt; (ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classEcalCrystalTimingCalibration.html">EcalCrystalTimingCalibration</a>&amp; s)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        os &lt;&lt; s.<a class="code" href="classEcalCrystalTimingCalibration.html#a9b429825019ee3d82be32e7869e8807f">mean</a>() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; s.<a class="code" href="classEcalCrystalTimingCalibration.html#a6a0685fed9b017364a5806e08cf656d4">stdDev</a>() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; s.<a class="code" href="classEcalCrystalTimingCalibration.html#a07b8f3990a2f72fb10e84c26dddad1c0">num</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        os &lt;&lt; s.mean() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; s.<a class="code" href="classEcalCrystalTimingCalibration.html#a6a0685fed9b017364a5806e08cf656d4">stdDev</a>() &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span> &lt;&lt; s.num();</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> os;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span></div>
@@ -197,9 +196,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    /// \todo weighted average by timeError</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> insertEvent(<a class="code" href="classEcalTimingEvent.html">EcalTimingEvent</a> te_)</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span>(<span class="keyword">true</span> || te_.<a class="code" href="classEcalTimingEvent.html#a4208b324512a5972bd381f62d52d4234">_sigmaTime</a> &gt; 0) {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            _sum += te_.<a class="code" href="classEcalTimingEvent.html#a7356d3ba9bb38293987b00753bd0b066">_time</a>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            _sum2 += te_.<a class="code" href="classEcalTimingEvent.html#a7356d3ba9bb38293987b00753bd0b066">_time</a> * te_.<a class="code" href="classEcalTimingEvent.html#a7356d3ba9bb38293987b00753bd0b066">_time</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span>(<span class="keyword">true</span> || te_._sigmaTime &gt; 0) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            _sum += te_._time;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            _sum2 += te_._time * te_._time;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            _num++;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            timingEvents.push_back(te_);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="comment">//updateChi2();</span></div>
@@ -327,22 +326,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">/* } */</span></div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;};</div>
-<div class="ttc" id="classEcalCrystalTimingCalibration_html_a7af26b1c675a3c578079187ded8ada8a"><div class="ttname"><a href="classEcalCrystalTimingCalibration.html#a7af26b1c675a3c578079187ded8ada8a">EcalCrystalTimingCalibration::meanError</a></div><div class="ttdeci">float meanError() const </div><div class="ttdef"><b>Definition:</b> EcalCrystalTimingCalibration.h:51</div></div>
 <div class="ttc" id="classEcalCrystalTimingCalibration_html_ad6744632b1582014b6f278e8ab82850e"><div class="ttname"><a href="classEcalCrystalTimingCalibration.html#ad6744632b1582014b6f278e8ab82850e">EcalCrystalTimingCalibration::add</a></div><div class="ttdeci">bool add(EcalTimingEvent te_)</div><div class="ttdoc">add new event for this crystal </div><div class="ttdef"><b>Definition:</b> EcalCrystalTimingCalibration.h:103</div></div>
-<div class="ttc" id="classEcalTimingEvent_html_a7356d3ba9bb38293987b00753bd0b066"><div class="ttname"><a href="classEcalTimingEvent.html#a7356d3ba9bb38293987b00753bd0b066">EcalTimingEvent::_time</a></div><div class="ttdeci">float _time</div><div class="ttdef"><b>Definition:</b> EcalTimingEvent.h:15</div></div>
 <div class="ttc" id="classEcalTimingEvent_html"><div class="ttname"><a href="classEcalTimingEvent.html">EcalTimingEvent</a></div><div class="ttdef"><b>Definition:</b> EcalTimingEvent.h:11</div></div>
 <div class="ttc" id="classEcalCrystalTimingCalibration_html_aff87eadab77c333c3830c5ef89e4321a"><div class="ttname"><a href="classEcalCrystalTimingCalibration.html#aff87eadab77c333c3830c5ef89e4321a">EcalCrystalTimingCalibration::EcalCrystalTimingCalibration</a></div><div class="ttdeci">EcalCrystalTimingCalibration(bool weightMean=true)</div><div class="ttdoc">default constructor </div><div class="ttdef"><b>Definition:</b> EcalCrystalTimingCalibration.h:30</div></div>
-<div class="ttc" id="classEcalCrystalTimingCalibration_html_a07b8f3990a2f72fb10e84c26dddad1c0"><div class="ttname"><a href="classEcalCrystalTimingCalibration.html#a07b8f3990a2f72fb10e84c26dddad1c0">EcalCrystalTimingCalibration::num</a></div><div class="ttdeci">unsigned int num() const </div><div class="ttdef"><b>Definition:</b> EcalCrystalTimingCalibration.h:38</div></div>
-<div class="ttc" id="EcalTimingEvent_8h_html"><div class="ttname"><a href="EcalTimingEvent_8h.html">EcalTimingEvent.h</a></div></div>
-<div class="ttc" id="classEcalCrystalTimingCalibration_html_a9b429825019ee3d82be32e7869e8807f"><div class="ttname"><a href="classEcalCrystalTimingCalibration.html#a9b429825019ee3d82be32e7869e8807f">EcalCrystalTimingCalibration::mean</a></div><div class="ttdeci">float mean() const </div><div class="ttdef"><b>Definition:</b> EcalCrystalTimingCalibration.h:42</div></div>
 <div class="ttc" id="classEcalCrystalTimingCalibration_html_a6a0685fed9b017364a5806e08cf656d4"><div class="ttname"><a href="classEcalCrystalTimingCalibration.html#a6a0685fed9b017364a5806e08cf656d4">EcalCrystalTimingCalibration::stdDev</a></div><div class="ttdeci">float stdDev() const </div><div class="ttdoc">average time (mean of the time distribution) </div><div class="ttdef"><b>Definition:</b> EcalCrystalTimingCalibration.h:46</div></div>
-<div class="ttc" id="classEcalCrystalTimingCalibration_html_a232a4f3b42645fdba4b056b588bcb677"><div class="ttname"><a href="classEcalCrystalTimingCalibration.html#a232a4f3b42645fdba4b056b588bcb677">EcalCrystalTimingCalibration::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const EcalCrystalTimingCalibration &amp;s)</div><div class="ttdef"><b>Definition:</b> EcalCrystalTimingCalibration.h:96</div></div>
 <div class="ttc" id="classEcalCrystalTimingCalibration_html"><div class="ttname"><a href="classEcalCrystalTimingCalibration.html">EcalCrystalTimingCalibration</a></div><div class="ttdef"><b>Definition:</b> EcalCrystalTimingCalibration.h:12</div></div>
-<div class="ttc" id="classEcalTimingEvent_html_a4208b324512a5972bd381f62d52d4234"><div class="ttname"><a href="classEcalTimingEvent.html#a4208b324512a5972bd381f62d52d4234">EcalTimingEvent::_sigmaTime</a></div><div class="ttdeci">float _sigmaTime</div><div class="ttdef"><b>Definition:</b> EcalTimingEvent.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 3 2015 15:20:08 for EcalTiming by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 3 2015 16:23:46 for EcalTiming by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

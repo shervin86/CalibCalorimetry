@@ -173,9 +173,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacepython_1_1ecalTimeMakeTreeFromRaw__cfg.html">    1</a></span>&#160;= cms.untracked.PSet(</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        threshold = cms.untracked.string(<span class="stringliteral">&#39;WARNING&#39;</span>)</div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacepython_1_1ecalTimeMakeTreeFromRaw__cfg.html#a1db8ec19e54cad37ec524ebea6075dda">    3</a></span>&#160;    )</div>
-</div><!-- fragment -->
-<p>Sequences ### DRaw to Digi. </p>
-<p>HybridClustering 5x5 clustering Reco sequence Unpack Raw to Digi HybridClustering 5x5 clustering Reco sequence Process PATH Potentiall Future Collision Reco Process Make tracks process.maketracks = cms.Sequence((process.gtEvmDigis)+(process.siPixelDigis) +(process.siStripDigis)+ (process.offlineBeamSpot) +(process.trackerlocalreco) +(process.recopixelvertexing) +(process.ckftracks)) Make PreShower digis process.makeESDigis = cms.Sequence(process.ecalPreshowerDigis) Make Vertices process.makeVertex = cms.Sequence(process.vertexreco) Potential Process Path process.p = cms.Path( process.preScaler + process.ecalPreRecoSequence + process.maketracks + process.makeESDigis + process.ecalRecoSequence + process.makeVertex + process.process.ecalTimeTree ) Old Process process.p = cms.Path( process.ecalDigis * process.gctDigis * process.gtDigis * process.gtEvmDigis * process.siPixelDigis * process.siStripDigis * process.offlineBeamSpot * process.trackerlocalreco * process.recopixelvertexing * process.ckftracks * process.ecalPreshowerDigis * process.ecalLocalRecoSequence * process.ecalClusters * process.vertexreco * #process.dumpEvContent * process.ecalTimeTree ) Print Out Some Messages </p>
+</div><!-- fragment --><p>HybridClustering 5x5 clustering Reco sequence Unpack Raw to Digi HybridClustering 5x5 clustering Reco sequence Process PATH Potentiall Future Collision Reco Process Make tracks process.maketracks = cms.Sequence((process.gtEvmDigis)+(process.siPixelDigis) +(process.siStripDigis)+ (process.offlineBeamSpot) +(process.trackerlocalreco) +(process.recopixelvertexing) +(process.ckftracks)) Make PreShower digis process.makeESDigis = cms.Sequence(process.ecalPreshowerDigis) Make Vertices process.makeVertex = cms.Sequence(process.vertexreco) Potential Process Path process.p = cms.Path( process.preScaler + process.ecalPreRecoSequence + process.maketracks + process.makeESDigis + process.ecalRecoSequence + process.makeVertex + process.process.ecalTimeTree ) Old Process process.p = cms.Path( process.ecalDigis * process.gctDigis * process.gtDigis * process.gtEvmDigis * process.siPixelDigis * process.siStripDigis * process.offlineBeamSpot * process.trackerlocalreco * process.recopixelvertexing * process.ckftracks * process.ecalPreshowerDigis * process.ecalLocalRecoSequence * process.ecalClusters * process.vertexreco * #process.dumpEvContent * process.ecalTimeTree ) Print Out Some Messages </p>
 
 </div>
 </div>
@@ -201,8 +199,6 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        connectionRetrialPeriod = cms.untracked.int32(10)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    )</div>
 </div><!-- fragment -->
-<p>GlobalTag Conditions Related. </p>
-
 </div>
 </div>
 <a class="anchor" id="ae626807b1df25d13b4e0c6a0c020543b"></a>
@@ -342,7 +338,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 3 2015 15:20:08 for EcalTiming by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 3 2015 15:48:58 for EcalTiming by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
