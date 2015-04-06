@@ -65,6 +65,10 @@
 #include "DataFormats/EcalDetId/interface/EBDetId.h"
 #include "DataFormats/EcalDetId/interface/EEDetId.h"
 
+//Includes need to read from geometry
+#include "Calibration/Tools/interface/EcalRingCalibrationTools.h"
+#include "Geometry/CaloGeometry/interface/CaloGeometry.h"
+#include "Geometry/Records/interface/CaloGeometryRecord.h"
 //
 // class declaration
 //
@@ -85,6 +89,8 @@ private:
 	// ----------member data ---------------------------
 	edm::InputTag _ecalRecHitsEBTAG; ///< input collection
 	edm::InputTag _ecalRecHitsEETAG;
+
+	EcalRingCalibrationTools _ringTools;
 
 	void dumpCalibration(std::string filename);
 
@@ -164,7 +170,8 @@ private:
 //
 EcalTimingCalibProducer::EcalTimingCalibProducer(const edm::ParameterSet& iConfig) :
 	_ecalRecHitsEBTAG(iConfig.getParameter<edm::InputTag>("recHitEBCollection")),
-	_ecalRecHitsEETAG(iConfig.getParameter<edm::InputTag>("recHitEECollection"))
+	_ecalRecHitsEETAG(iConfig.getParameter<edm::InputTag>("recHitEECollection")),
+	_ringTools(EcalRingCalibrationTools())
 {
 	std::cout << _ecalRecHitsEETAG << std::endl;
 	//_ecalRecHitsEBToken = edm::consumes<EcalRecHitCollection>(iConfig.getParameter< edm::InputTag > ("ebRecHitsLabel"));
@@ -204,6 +211,12 @@ void EcalTimingCalibProducer::beginOfJob(const edm::EventSetup& iSetup)
 {
 	std::cout << "Begin job: createConstants" << std::endl;
 	createConstants(iSetup);
+
+	//inizializzare la geometria di ecal
+	edm::ESHandle<CaloGeometry> pG;
+	iSetup.get<CaloGeometryRecord>().get(pG);
+	EcalRingCalibrationTools::setCaloGeometry(&(*pG));
+
 }
 
 // ------------ method called at the beginning of a new loop over the event  ------------
@@ -328,6 +341,7 @@ void EcalTimingCalibProducer::dumpCalibration(std::string filename)
 {
 	std::ofstream fout(filename);
 
+	std::cout << "#ix\tiy\tiz\ttime\trawId\tiRing" << std::endl;
 	// loop over the constants
 	// to make more efficient
 #ifdef DEBUG
@@ -343,12 +357,16 @@ void EcalTimingCalibProducer::dumpCalibration(std::string filename)
 
 	for(unsigned int i = 0; i < _timeCalibConstants.barrelItems().size(); ++i) {
 		EBDetId id(EBDetId::detIdFromDenseIndex(i)); // this is a stupid thing that I'm obliged to do due to the stupid structure of the ECAL container
-		fout << id.ieta() << "\t" << id.iphi() << "\t" << 0 << "\t" << _timeCalibConstants.barrelItems()[i] << "\t" << id.rawId() << std::endl;
+		fout << id.ieta() << "\t" << id.iphi() << "\t" << 0 << "\t" << _timeCalibConstants.barrelItems()[i]
+		     << "\t" << id.rawId() << "\t" <<  EcalRingCalibrationTools::getRingIndex(id)
+		     << std::endl;
 	}
 
 	for(unsigned int i = 0; i < _timeCalibConstants.endcapItems().size(); ++i) {
 		EEDetId id(EEDetId::detIdFromDenseIndex(i)); // this is a stupid thing that I'm obliged to do due to the stupid structure of the ECAL container
-		fout << id.ix() << "\t" << id.iy() << "\t" << id.zside() << "\t" << _timeCalibConstants.endcapItems()[i] << std::endl;
+		fout << id.ix() << "\t" << id.iy() << "\t" << id.zside() << "\t" << _timeCalibConstants.endcapItems()[i]
+		     << "\t" << id.rawId() << "\t" <<  EcalRingCalibrationTools::getRingIndex(id)
+		     << std::endl;
 	}
 	fout.close();
 }
